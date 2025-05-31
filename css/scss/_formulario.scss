@@ -1,0 +1,63 @@
+.formulario-contacto {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: $color-blur;
+    border-radius: 10px;
+    color: $color-secundario;
+    box-shadow: $sombra-caja;
+    backdrop-filter: $blur-caja;
+    border: 1px solid $color-blur-borde;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: none;
+        font-size: 1em;
+    }
+
+    button {
+        display: block;
+        margin: 20px auto 0;
+        padding: 10px 30px;
+        font-size: 1.1em;
+        background-color: $color-alerta;
+        color: $color-secundario;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+        background-color: $color-alerta-hover;
+        }
+    }
+
+    @include mobile {
+        input,
+        textarea {
+        font-size: 0.95rem;
+        }
+
+        button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 15px;
+        font-size: 1rem;
+        }
+    }
+}

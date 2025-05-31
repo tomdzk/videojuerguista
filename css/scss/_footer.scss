@@ -1,0 +1,32 @@
+footer {
+    background-color: $color-fondo;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+
+    @include mobile {
+        p {
+            font-size: 0.85rem;
+        }
+    }
+}
+
+.redes-sociales {
+    margin-top: 10px;
+
+    a {
+        color: $color-secundario;
+        margin: 0 10px;
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $color-primario;
+        }
+
+        @include mobile {
+            font-size: 1.2rem;
+            margin: 0 6px;
+        }
+    }
+}

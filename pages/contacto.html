@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body class="header-pequeno">
+<body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
@@ -77,16 +77,29 @@
         form.addEventListener('submit', function(e) {
             e.preventDefault();
 
+            alerta.classList.remove('desvanecer');
             alerta.style.display = 'block';
+            alerta.classList.add('animar');
             form.reset();
 
             setTimeout(() => {
-            alerta.style.display = 'none';
-            }, 6000);
+                alerta.classList.remove('animar');
+                alerta.classList.add('desvanecer');
+
+                setTimeout(() => {
+                    alerta.style.display = 'none';
+                    alerta.classList.remove('desvanecer');
+                }, 600); 
+            }, 5500); 
         });
 
         function ocultarAlerta() {
-            alerta.style.display = 'none';
+            alerta.classList.remove('animar');
+            alerta.classList.add('desvanecer');
+            setTimeout(() => {
+                alerta.style.display = 'none';
+                alerta.classList.remove('desvanecer');
+            }, 600);
         }
     </script>
 

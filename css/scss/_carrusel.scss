@@ -1,0 +1,12 @@
+.carrusel-img {
+    width: 100%;
+    max-width: 650px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+
+    @include mobile {
+        height: 250px;
+        border-radius: 8px;
+    }
+}

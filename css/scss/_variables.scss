@@ -1,0 +1,25 @@
+$color-primario: #00ffcc;
+$color-secundario: #ffffff;
+$color-fondo: #111;
+$color-texto: #f2f2f2;
+$color-alerta: #ff4747;
+$color-alerta-hover: #cc3b3b;
+$color-sombra: rgba(0, 0, 0, 0.3);
+$color-box-shadow: rgba(31, 38, 135, 0.37);
+$color-blur: rgba(255, 255, 255, 0.1);
+$color-blur-borde: rgba(255, 255, 255, 0.18);
+
+$fuente-base: Arial, sans-serif;
+$fuente-titulo: Arial, sans-serif;
+
+$bg-image: url('../images/fondo2.png');
+
+$sombra-principal: 0 0 10px $color-sombra;
+$sombra-caja: 0 8px 32px 0 $color-box-shadow;
+$blur-caja: blur(8px);
+
+@mixin mobile {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
