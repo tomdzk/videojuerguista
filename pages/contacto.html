@@ -7,7 +7,13 @@
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
+    <meta name="descrption" content="Videojuerguistas es una página web para la compra de saldo en Steam usando pesos y sin impuestos. Escribinos para responder cualquier consulta que tengas.">
+    <meta name="keywords" content="Contacto, Formulario, Mensaje, Ubicación, Saldo, Buenos Aires">
+    <meta name="author" content="Tomás de Azkue">
 </head>
 <body>
     <header>
@@ -23,10 +29,10 @@
                 <div class="collapse navbar-collapse just" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../pages/tienda.html">Tienda</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../pages/proximas_salidas.html">Próximas salidas</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../pages/quienes_somos.html">Quiénes somos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../pages/contacto.html">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./tienda.html">Tienda</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./proximas_salidas.html">Próximas salidas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./quienes_somos.html">Quiénes somos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
                     </ul>
                 </div>
                 <div style="width: 200px;"></div>
@@ -74,8 +80,13 @@
         const form = document.querySelector('form');
         const alerta = document.getElementById('alerta-envio');
 
-        form.addEventListener('submit', function(e) {
+        form.addEventListener('submit', function (e) {
             e.preventDefault();
+
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
 
             alerta.classList.remove('desvanecer');
             alerta.style.display = 'block';
@@ -85,12 +96,11 @@
             setTimeout(() => {
                 alerta.classList.remove('animar');
                 alerta.classList.add('desvanecer');
-
                 setTimeout(() => {
                     alerta.style.display = 'none';
                     alerta.classList.remove('desvanecer');
-                }, 600); 
-            }, 5500); 
+                }, 600);
+            }, 5500);
         });
 
         function ocultarAlerta() {
@@ -104,5 +114,6 @@
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <audio id="anillo" src="../sounds/anillo.mp3" preload="auto"></audio>
 </body>
 </html>

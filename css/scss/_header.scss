@@ -14,7 +14,9 @@ ul {
 }
 
 .navbar-nav .nav-link {
+    font-family: $fuente-header;
     color: $color-primario !important;
+    font-size: 1.4rem;
 
     &:hover {
         color: $color-secundario !important;
