@@ -5,7 +5,7 @@ Videjuergistas es un proyecto de web donde el usuario puede comprar, a través d
 
 El trabajo ha sido realizado a través de los siguientes objetivos:
 
-- Realizar la estructura completa del sitio web
+- Llevar a cabo la estructura completa del sitio web
 - Efectuar el estilo final de la web
 - Diseño responsive
 - Aplicar técnicas de SEO
